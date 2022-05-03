@@ -1,0 +1,18 @@
+#navbar{
+    display: flex;
+    justify-content: space-evenly;
+}
+#logo{
+    width: 25%;
+    cursor: pointer;
+}
+#navbar > div{
+    border: 1px solid red;
+    width: 30%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#navbar > div p{
+    cursor: pointer;
+}
