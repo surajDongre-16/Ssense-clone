@@ -1,6 +1,6 @@
 function navbar(){
     return ` <div id="left-nav">
-                <p>MENSWEAR</p>
+                <p><a href="../html files/mens.html">MENSWEAR</a></p>
                 <p>WOMENSWEAR</p>
                 <p>EVRYTHING ELSE</p>
                 <p>SEARCH</p>
