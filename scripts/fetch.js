@@ -48,4 +48,15 @@ let append = (data,container) =>{
 }
 
 
-export {show,append}
+function cSearch(){
+    show(this.id).then((data)=>{
+        const container= document.getElementById("middle-container")
+        container.innerHTML=null
+        append(data,container)
+    })
+}
+
+
+
+
+export {show,append,cSearch}
