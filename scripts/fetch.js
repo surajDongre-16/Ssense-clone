@@ -1,31 +1,31 @@
-let show = ()=>{
+let show = async (query)=>{
     // console.log(query)
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
-            'X-RapidAPI-Key': '2fdddb05aemshc1cb453a53c57cdp1b67cfjsneee8719dd07f'
-        }
-    };
-    
-    fetch('https://asos2.p.rapidapi.com/v2/auto-complete?q=bikini%20top&store=US&country=US&currency=USD&sizeSchema=US&lang=en-US', options)        .then(function(res){
-            return res.json()
-        }) 
-        .then(function(res){
-            console.log(res)
-        })
-        .catch(err => console.error(err));
 
+
+    try{
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
+                'X-RapidAPI-Key': '2fdddb05aemshc1cb453a53c57cdp1b67cfjsneee8719dd07f'
+            }
+        };
         
-
+        let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&q=${query}&currency=USD&sizeSchema=US&lang=en-US`, options)           
+        let data=await res.json()
+        // console.log(data)
+        // append(data.products)
+        return data.products        
+    }catch(err){
+        console.log(err)
+    }
 }
-
 
 let append = (data,container) =>{
 
     
     data.forEach(({brandName,imageUrl,name,price:{current:{text}}})=>{
-        console.log(brandName,imageUrl,name)
+        // console.log(brandName,imageUrl,name)
         let div=document.createElement("div")
         div.setAttribute("class","div")
 
@@ -48,4 +48,15 @@ let append = (data,container) =>{
 }
 
 
-export {show,append}
+function cSearch(){
+    show(this.id).then((data)=>{
+        const container= document.getElementById("middle-container")
+        container.innerHTML=null
+        append(data,container)
+    })
+}
+
+
+
+
+export {show,append,cSearch}
