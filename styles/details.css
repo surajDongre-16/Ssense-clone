@@ -1,0 +1,28 @@
+#container{
+    width: 100%;
+    display: flex;
+    margin-top: 3%;
+}
+#container > div{
+    border: 1px solid red;
+}
+#middle-container{
+    width: 75%;
+    display: grid;
+    align-content:space-around ;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+#left-sidebar{
+    width: 12%;
+}
+#right-sidebar{
+    width: 12%;
+}
+#middle-container > .div{
+    width: 90%;
+    margin-left: 5%;
+}
+.div img{
+    width: 100%;
+}
