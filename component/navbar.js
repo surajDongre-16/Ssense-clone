@@ -15,5 +15,4 @@ function navbar(){
                 <p>SHOPPING BAG (0)</p>
             </div>`
 }
-
 export default navbar
