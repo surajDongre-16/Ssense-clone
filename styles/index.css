@@ -1,6 +1,8 @@
 #navbar{
     display: flex;
     justify-content: space-evenly;
+    position: fixed;
+    width: 100%;
 }
 #logo{
     width: 25%;
@@ -15,4 +17,57 @@
 }
 #navbar > div p{
     cursor: pointer;
+}
+
+#product{
+    display: flex;
+
+}
+#product>div{
+    height:100%;
+    width: 30%;
+    border: 1px solid red;
+}
+#product>div:nth-child(1){
+    margin-top: 5%;
+    font-size: 11px;
+    padding-top: 12%;
+    padding-bottom: calc(100vh - 55px);
+    box-sizing: border-box;
+    padding-left: 5%;
+    position: fixed;
+    top: 0;
+    left: 0%;
+}
+#product>div:nth-child(2){
+    margin-top: 5%;
+    margin-left: 33%;
+}
+#product>div:nth-child(2)>div>img{
+    width: 100%;
+}
+#product>div:nth-child(3){
+    margin-top: 5%;
+    margin-left: 70%;
+    padding-top: 15%;
+    position: fixed;
+}
+#selectSize{
+    padding: 10px 180px 10px 15px;
+    display: block;
+}
+#bag{
+    background-color: black;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border: none;
+    margin-top: 2%;
+    padding: 10px 100px 10px 100px;
+}
+#wishlist{
+    border: none;
+    background-color: white;
+}
+#buy>p{
+    color: grey;
 }
