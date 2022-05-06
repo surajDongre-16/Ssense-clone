@@ -1,10 +1,5 @@
 
-#proceed{
-align-self: flex-start;
-margin-top: 50px;
-margin-left: 50px;
-padding: 20px;
-}
+
 p{
 color: rgb(65, 61, 61);
 font-size: small;
@@ -68,4 +63,10 @@ margin-top: 100px;
         height: 250px;
         margin: auto;
         margin-top: 100px;
-    }   
+    }  
+#proceed{
+align-self: flex-start;
+margin-top: 50px;
+margin-left: 50px;
+padding: 20px;
+}
