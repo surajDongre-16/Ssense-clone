@@ -51,11 +51,6 @@ margin: auto;
 margin-top: 100px;
 }
 
-#container{
-    display:grid;
-    grid-template-columns: 60% 35%;
-    justify-content: center;
-    }
 
 #main{
         border-bottom: 1px solid rgb(175, 154, 154);
@@ -70,3 +65,9 @@ margin-top: 50px;
 margin-left: 50px;
 padding: 20px;
 }
+
+#container{
+    display:grid;
+    grid-template-columns: 60% 35%;
+    justify-content: center;
+    }
