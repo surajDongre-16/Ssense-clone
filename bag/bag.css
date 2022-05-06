@@ -1,10 +1,4 @@
-#main{
-    border-bottom: 1px solid rgb(175, 154, 154);
-    width: 70%;
-    height: 250px;
-    margin: auto;
-    margin-top: 100px;
-}
+
 #proceed{
 align-self: flex-start;
 margin-top: 50px;
@@ -16,12 +10,6 @@ color: rgb(65, 61, 61);
 font-size: small;
 }
 
-
-#container{
-display:grid;
-grid-template-columns: 60% 35%;
-justify-content: center;
-}
 
 
 #input{
@@ -67,3 +55,17 @@ height: 250px;
 margin: auto;
 margin-top: 100px;
 }
+
+#container{
+    display:grid;
+    grid-template-columns: 60% 35%;
+    justify-content: center;
+    }
+
+#main{
+        border-bottom: 1px solid rgb(175, 154, 154);
+        width: 70%;
+        height: 250px;
+        margin: auto;
+        margin-top: 100px;
+    }   
