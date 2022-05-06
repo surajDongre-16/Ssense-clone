@@ -7,7 +7,7 @@ let show = async (query)=>{
             method: 'GET',
             headers: {
                 'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
-                'X-RapidAPI-Key': '2fdddb05aemshc1cb453a53c57cdp1b67cfjsneee8719dd07f'
+                'X-RapidAPI-Key': 'c83cde790bmsh4f0e7202953be1cp1f2680jsn7e1ad9407925'
             }
         };
         

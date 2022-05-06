@@ -5,9 +5,97 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../styles/order.css">
 </head>
 <body>
-    <p>Working</p>
-    
+    <div id="navbarOnlyLogo"><div id="logo"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg" alt="">
+    </div></div>
+    <div id="checkout">
+        <div>
+            <div>
+                <div>CHECKOUT</div>
+                <p>SHIPPING ADDRESS</p>
+                <form action="" id="userDetails">
+                    <div><label for="f_Name">First Name</label><br>
+                        <input type="text" name="f_Name" id="f_Name" class="Longinput input"></div>
+                    <div><label for="l_Name">Last Name</label><br>
+                        <input type="text" name="l_Name" id="l_Name" class="Longinput input"></div>
+                    <div><label for="address">Street Address</label><br>
+                        <input type="text" name="address" id="address" class="Longinput input"></div>
+                    <div><label for="company">Company(Optional)</label><br>
+                        <input type="text" name="company" id="company" class="Longinput input"></div>
+                    <div><label for="city">City</label><br>
+                        <input type="text" name="city" id="city" class="Longinput input"></div>
+                    <div><label for="zip">ZIP or Postal Code</label><br>
+                        <input type="text" name="zip" id="zip" class="input"></div>
+                    <div><label for="country">Country</label><br>
+                        <div id="country"></div></div>
+                    <div><label for="">State/Province</label><br>
+                        <div id="state"><select name="" id="" class="input">
+                            <option value="">Select</option>
+                        </select></div></div>
+                    <div><label for="phone">Phone</label><br>
+                        <input type="number" name="phone" id="mobile" class="input"></div>
+                </form>
+                <p>SHIPPING METHOD</p>
+                <input type="radio" name="shipping_method" id="shippingradio"><label for="shipping_method">$0.00 USD | 5 - 7 days | Express</label>
+                <p>PAYMENT METHOD</p>
+                <div><input type="radio" name="paymethod" id="card"> <label for="card">Pay with credit or debit card</label></div>
+                <div><input type="radio" name="paymethod" id="paypalradio">  <label for="paypalradio">Pay with PayPal</label> </div>
+                <div><input type="radio" name="paymethod" id="alipay"> <label for="alipay">Pay with Alipay</label></div>
+            </div>
+            <div id="card_details">
+                <p>Card Details</p>
+                <form action="">
+                    <div><label for="card_number">Card Number</label>
+                        <input type="number" name="card_number" id="card_number" placeholder="1234 1234 1234 1234" maxlength="16" class="Longinput input"></div>
+                    <div><label for="e_date">Expiration date</label><br>
+                        <input type="text" name="" id="" maxlength="5" placeholder="MM/YY" class="input"></div>
+                    <div><label for="cardHolder_name">Cardholder's name</label>
+                        <input type="text" name="cardHolder_name" id="ch_name" class="Longinput input"></div>
+                    <div><label for="s_code">Security code</label><br>
+                        <input type="number" name="s_code" id="s_code" placeholder="CVV" maxlength="3" class="input"></div>
+                </form>
+                <p>Billing Address</p>
+                <input type="checkbox" name="sameAddress" id="sameAddress"><label for="sameAddress">Same as shipping address</label>
+                <div id="billing">
+                    <form action="" id="userDetails">
+                        <div><label for="f_Name">First Name</label><br>
+                            <input type="text" name="f_Name" id="f_Name" class="Longinput input"></div>
+                        <div><label for="l_Name">Last Name</label><br>
+                            <input type="text" name="l_Name" id="l_Name" class="Longinput input"></div>
+                        <div><label for="address">Street Address</label><br>
+                            <input type="text" name="address" id="address" class="Longinput input"></div>
+                        <div><label for="company">Company(Optional)</label><br>
+                            <input type="text" name="company" id="company" class="Longinput input"></div>
+                        <div><label for="city">City</label><br>
+                            <input type="text" name="city" id="city" class="Longinput input"></div>
+                        <div><label for="zip">ZIP or Postal Code</label><br>
+                            <input type="text" name="zip" id="zip" class="input"></div>
+                        <div><label for="country">Country</label><br>
+                            <div id="country"></div></div>
+                        <div><label for="">State/Province</label><br>
+                            <div id="state"><select name="" id="" class="input">
+                                <option value="">Select</option>
+                            </select></div></div>
+                        <div><label for="phone">Phone</label><br>
+                            <input type="number" name="phone" id="mobile" class="input"></div>
+                    </form>
+                </div>   
+            </div>
+        </div>
+        <div id="summary">
+            <p class="summary_content">ORDER SUMMARY</p>
+            <!-- Card Items Append div -->
+            <div class="summary_content" id=""></div>
+            <!-- Cart Items Append div -->
+            <p class="summary_content">COUNTRY/REGION:</p>
+            <div class="summary_content" id="button"><div id="button_card_pay">PLACE ORDER</div></div>
+        </div>
+    </div>
 </body>
 </html>
+<script src="https://www.paypal.com/sdk/js?client-id=AfDzwH4OwyT0s0XzYRSItNFiPdvdQoqkScDhl-aVioQcj4OirTmJTYt40xEn3unNme5E6NGPi3BEG1ND" ></script>
+<script src="../scripts/checkout.js" type="module" ></script>
+
+    
