@@ -1,16 +1,18 @@
 import navbar from "../component/navbar.js"
+import {womens_accessories} from "../component/body.js"
 import {show,append,cSearch} from "./fetch.js"
-import { mens_acc } from "../component/body.js"
 import {searchDisplay} from "../component/search.js"
 
 document.querySelector(".search").innerHTML=searchDisplay()
 const nav=document.getElementById("navbar")
+
 nav.innerHTML=navbar()
 
 const container=document.getElementById("container")
-container.innerHTML=mens_acc()
+container.innerHTML=womens_accessories()
 
 // redirection to different sections
+
 let men=document.getElementById("menswear")
 men.addEventListener("click",function(){
     localStorage.setItem("gender",JSON.stringify("mens"))
@@ -43,7 +45,7 @@ show(gender,"freshness","").then((data)=>{
 let x=document.getElementById("accessories").children
 for(let el of x){
     el.addEventListener("click",function(){
-        let acc="mens_"+el.id
+        let acc="womens_"+el.id
         cSearch(acc,"freshness","")
     })
 }
@@ -68,7 +70,7 @@ let color=document.getElementById("colors").children
 
 for(let el of color){
     el.addEventListener("click",function(){
-        cSearch("mens_accessories","oldest",el.id)
+        cSearch("womens_accessories","oldest",el.id)
     })
 }
 

@@ -1,16 +1,19 @@
 #container{
     width: 100%;
     display: flex;
-    margin-top: 3%;
+    margin-top: 5%;
 }
-#container > div{
-    border: 1px solid red;
+a{
+    text-decoration: none;
+}
+p{
+    cursor: pointer;
 }
 #middle-container{
     width: 75%;
     display: grid;
-    align-content:space-around ;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
     gap: 20px;
 }
 #left-sidebar{
@@ -19,10 +22,47 @@
 #right-sidebar{
     width: 12%;
 }
+#right-sidebar > div{
+    margin-left: 25%;
+}
 #middle-container > .div{
     width: 90%;
     margin-left: 5%;
 }
 .div img{
     width: 100%;
+}
+
+.search{
+    border: 1px solid black;
+    width: 30%;
+    height: 150px;
+    margin-left: 4%;
+    display: none;
+    position: absolute;
+    top: 7%;
+    background-color: white;
+}
+.cat-name{
+    display: flex;
+    justify-content: space-around;
+}
+.search-box{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.search-box > div{
+    border: 1px solid black;
+    height: 30px;
+    padding-right: 5%;
+}
+#search{
+    height: 24px;
+    border: none;
+}
+#close{
+    margin-top: 1%;
+    margin-left: -10%;
+    cursor: pointer;
 }

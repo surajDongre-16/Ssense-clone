@@ -6,9 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="./styles/index.css">
+    <script
+      src="https://kit.fontawesome.com/24c494a6b6.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
+<style>
+    .search{
+        border: 1px solid black;
+        width: 30%;
+        height: 150px;
+        margin-left: 4%;
+        display: none;
+    }
+    .cat-name{
+        display: flex;
+        justify-content: space-around;
+    }
+    .search-box{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5%;
+    }
+    .search-box > div{
+        border: 1px solid black;
+        height: 30px;
+        padding-right: 5%;
+    }
+    #search{
+        height: 24px;
+        border: none;
+    }
+    #close{
+        margin-top: 1%;
+        margin-left: -10%;
+        cursor: pointer;
+    }
+</style>
 <body>
     <div id="navbar"></div>
+    <div class="search"></div>
 </body>
 </html>
 <script src="./scripts/index.js" type="module"></script>

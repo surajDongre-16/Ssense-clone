@@ -1,14 +1,16 @@
 import navbar from "../component/navbar.js"
+import {womenBody} from "../component/body.js"
 import {show,append,cSearch} from "./fetch.js"
-import { mens_acc } from "../component/body.js"
 import {searchDisplay} from "../component/search.js"
 
 document.querySelector(".search").innerHTML=searchDisplay()
 const nav=document.getElementById("navbar")
+
 nav.innerHTML=navbar()
 
 const container=document.getElementById("container")
-container.innerHTML=mens_acc()
+container.innerHTML=womenBody()
+
 
 // redirection to different sections
 let men=document.getElementById("menswear")
@@ -29,24 +31,18 @@ everything.addEventListener("click",function(){
 })
 
 let gender=JSON.parse(localStorage.getItem("gender"))
-gender=gender+"_accessories" 
+gender=gender+"_clothes" 
 
 // showing data on the main page
 
-show(gender,"freshness","").then((data)=>{
-    const container= document.getElementById("middle-container")
-    container.innerHTML=null
-    append(data,container)
-})
+// show(gender,"freshness","").then((data)=>{
+//     const container= document.getElementById("middle-container")
+//     container.innerHTML=null
+//     append(data,container)
+// })
 
 
-let x=document.getElementById("accessories").children
-for(let el of x){
-    el.addEventListener("click",function(){
-        let acc="mens_"+el.id
-        cSearch(acc,"freshness","")
-    })
-}
+// code for different categories, sorting methods
 
 let id=document.getElementById("all-designers").children
 
@@ -61,14 +57,14 @@ let sort=document.getElementById("sort").children
 for(let el of sort){
     el.addEventListener("click",function(){
         let color=Math.floor(Math.random() * 10) +1
-        cSearch("acessories",el.id,color)
+        cSearch("womens_clothes",el.id,color)
     })
 }
 let color=document.getElementById("colors").children
 
 for(let el of color){
     el.addEventListener("click",function(){
-        cSearch("mens_accessories","oldest",el.id)
+        cSearch("womens_clothes","oldest",el.id)
     })
 }
 

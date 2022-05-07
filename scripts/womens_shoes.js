@@ -1,16 +1,18 @@
 import navbar from "../component/navbar.js"
+import {womens_shoes} from "../component/body.js"
 import {show,append,cSearch} from "./fetch.js"
-import { mens_acc } from "../component/body.js"
 import {searchDisplay} from "../component/search.js"
 
 document.querySelector(".search").innerHTML=searchDisplay()
 const nav=document.getElementById("navbar")
+
 nav.innerHTML=navbar()
 
 const container=document.getElementById("container")
-container.innerHTML=mens_acc()
+container.innerHTML=womens_shoes()
 
 // redirection to different sections
+
 let men=document.getElementById("menswear")
 men.addEventListener("click",function(){
     localStorage.setItem("gender",JSON.stringify("mens"))
@@ -29,7 +31,7 @@ everything.addEventListener("click",function(){
 })
 
 let gender=JSON.parse(localStorage.getItem("gender"))
-gender=gender+"_accessories" 
+gender=gender+"_shoes" 
 
 // showing data on the main page
 
@@ -43,7 +45,7 @@ show(gender,"freshness","").then((data)=>{
 let x=document.getElementById("accessories").children
 for(let el of x){
     el.addEventListener("click",function(){
-        let acc="mens_"+el.id
+        let acc="womens_"+el.id
         cSearch(acc,"freshness","")
     })
 }
@@ -61,14 +63,14 @@ let sort=document.getElementById("sort").children
 for(let el of sort){
     el.addEventListener("click",function(){
         let color=Math.floor(Math.random() * 10) +1
-        cSearch("acessories",el.id,color)
+        cSearch("women_shoes",el.id,color)
     })
 }
 let color=document.getElementById("colors").children
 
 for(let el of color){
     el.addEventListener("click",function(){
-        cSearch("mens_accessories","oldest",el.id)
+        cSearch("womens_shoes","oldest",el.id)
     })
 }
 

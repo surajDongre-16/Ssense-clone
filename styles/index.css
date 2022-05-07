@@ -1,15 +1,15 @@
 #navbar{
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    width: 100%;
+    top: 0;
 }
 #logo{
     width: 25%;
     cursor: pointer;
 }
 #navbar > div{
-    border: 1px solid red;
     width: 30%;
     font-size: 13px;
     display: flex;

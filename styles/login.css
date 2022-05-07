@@ -1,0 +1,55 @@
+#main{
+    display: flex;
+    height: auto;
+    width: 40%;
+    justify-content: center;
+    /* font-size: 11px; */
+    line-height: 15px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
+}
+#main > div{
+    width: 80%;
+}
+#main input{
+    height: 30px;
+}
+#lbtn,#lbtn1,#cbtn{
+    height: 35px;
+    width: 103%;
+    background-color: black;
+    color: white;
+}
+
+.check-box{
+    display: flex;
+    justify-content: space-between;
+}
+.check-box > p{
+    margin-left: -15%;
+    margin-top: 2%;
+}
+
+#back{
+    text-align: center;
+    
+}
+.data{
+    text-align: justify;
+    margin-top: 5%;
+}
+/* #col,#ps1{
+    margin-top: 10px;
+    width: 500px;
+    margin-left: 0px;
+  
+}
+
+#mail,#pass,#mail1,#pass1{
+    width: 380px;
+    height: 30px;
+}
+ */
