@@ -26,31 +26,35 @@
 #product>div{
     height:100%;
     width: 30%;
-    border: 1px solid red;
 }
 #product>div:nth-child(1){
-    margin-top: 5%;
+    margin-left: 10%;
     font-size: 11px;
-    padding-top: 12%;
-    padding-bottom: calc(100vh - 55px);
+    padding-top: 15%;
+    padding-bottom: calc((100vh - 70%));
     box-sizing: border-box;
-    padding-left: 5%;
-    position: fixed;
+    padding-right: 10%;
+    position: sticky;
     top: 0;
-    left: 0%;
+    left: 0;
+
 }
+
 #product>div:nth-child(2){
     margin-top: 5%;
-    margin-left: 33%;
+    margin-left: 0%;
 }
 #product>div:nth-child(2)>div>img{
-    width: 100%;
+   margin-left:40%;
+   
 }
 #product>div:nth-child(3){
-    margin-top: 5%;
     margin-left: 70%;
     padding-top: 15%;
-    position: fixed;
+    padding-bottom: calc((100vh - 30%));
+    position: sticky;
+    top: 0;
+    right: 0;
 }
 #selectSize{
     padding: 10px 180px 10px 15px;
@@ -70,4 +74,12 @@
 }
 #buy>p{
     color: grey;
+}
+#recommend{
+    display: flex;
+    overflow-x: scroll;
+    gap: 40px;
+    margin-top: 5%;
+    width: 100vw;
+
 }
