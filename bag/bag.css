@@ -1,10 +1,26 @@
-
-
+#main{
+    width: 70%;
+    height: 250px;
+    margin: auto;
+    margin-top: 100px;
+}
+#proceed{
+align-self: flex-start;
+margin-top: 50px;
+margin-left: 50px;
+padding: 20px;
+}
 p{
 color: rgb(65, 61, 61);
 font-size: small;
 }
 
+
+#container{
+display:grid;
+grid-template-columns: 60% 35%;
+justify-content: center;
+}
 
 
 #input{
@@ -46,28 +62,51 @@ gap: 20px;
 }
 #add{
 width: 70%;
-height: 250px;
+height: 100%;
 margin: auto;
-margin-top: 100px;
+margin-top: 200px;
+}
+
+.btnstyle{
+    text-decoration: underline;
+    cursor: pointer;
+
+}
+
+#d2, #d3{
+    display: flex;
+    justify-content: space-between;
+}
+#d3{
+    border-bottom: 1px solid rgb(175, 154, 154);
+
+}
+.mtv,.rmv{
+    text-decoration: underline;
+    cursor: pointer;
+
 }
 
 
-#main{
-        border-bottom: 1px solid rgb(175, 154, 154);
-        width: 70%;
-        height: 250px;
-        margin: auto;
-        margin-top: 100px;
-    }  
-#proceed{
-align-self: flex-start;
-margin-top: 50px;
-margin-left: 50px;
-padding: 20px;
-}
 
-#container{
-    display:grid;
-    grid-template-columns: 60% 35%;
-    justify-content: center;
-    }
+#nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+}
+#lg{
+    width: 25%;
+    height: auto;
+    cursor: pointer;
+}
+#nav > div{
+    width: 30%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#nav > div p{
+    cursor: pointer;
+}
