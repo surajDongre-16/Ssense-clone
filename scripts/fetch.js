@@ -1,4 +1,7 @@
-let show = async (query)=>{
+//pricedesc|priceasc|freshness|oldest
+
+
+let show = async (query,price,color)=>{
     // console.log(query)
 
 
@@ -7,11 +10,12 @@ let show = async (query)=>{
             method: 'GET',
             headers: {
                 'X-RapidAPI-Host': 'asos2.p.rapidapi.com',
-                'X-RapidAPI-Key': 'c83cde790bmsh4f0e7202953be1cp1f2680jsn7e1ad9407925'
+                'X-RapidAPI-Key': 'e0fea4c491msh0774c68ef2a9450p17d0bbjsnc89953e2b930'
             }
         };
-        
-        let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&q=${query}&currency=USD&sizeSchema=US&lang=en-US`, options)           
+//https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=mens%20shirts&base_colour={color}&currency=USD&sizeSchema=US&lang=en-US        
+//https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&q=${query}&currency=USD&sizeSchema=US&lang=en-US
+let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=${query}&base_colour=${color}&currency=USD&sizeSchema=US&lang=en-US`, options)           
         let data=await res.json()
         // console.log(data)
         // append(data.products)
@@ -48,10 +52,20 @@ let append = (data,container) =>{
 }
 
 
-function cSearch(){
-    show(this.id).then((data)=>{
+function cSearch(id,sort,color){
+    if(id==""){
+        id="clothes"
+    }
+    if(sort==undefined){
+        sort="freshness"
+    }
+    if(color==undefined){
+        color=Math.floor(Math.random() * 10) +1
+    }
+    show(id,sort,color).then((data)=>{
         const container= document.getElementById("middle-container")
         container.innerHTML=null
+        console.log(data)
         append(data,container)
     })
 }

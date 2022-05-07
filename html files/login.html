@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+    <link rel="stylesheet" href="../styles/index.css">
+  </head>
+  <body>
+      <div id="navbar"></div>
+    <div id="main">
+      <div id="col">
+        <p id="ind1">LOGIN OR CREATE ACCOUNT</p>
+        <p id="ind2" style="display: none">LOGIN</p>
+        <p id="ind3" style="display: none">CREATE ACCOUNT</p>
+
+        <label id="em">Email address</label> <br /><br />
+        <input type="email" id="mail" size="70" required /><br /><br />
+
+        <div id="ps" style="display: none">
+          <label>Password</label><br /><br />
+          <input type="password" id="pass" size="70" required /><br /><br />
+        </div>
+
+        <div id="cr" style="display: none">
+          <p>Sign up for updates and promotions</p>
+          <div class="check-box"><input type="radio"  /><p>MEN'S </p><input type="radio" /><p>WOMEN'S</p>
+          <input type="radio" /><p>No THANKS</p></div>
+          <br />
+          <br>
+          <button id="cbtn" style="display: none">CREATE AN ACCOUNT</button>
+          <p id="back">BACK</p>
+          <p class="data">
+            When you create an SSENSE account, we collect your email and other
+            personal data to enhance your shopping experience and, subject to your
+            agreement, to provide you with exclusive email updates, promotions and
+            notifications. We may also use third party search engines and social
+            media platforms to deliver our updates, promotions and notifications
+            to you.
+          </p>
+          <p class="data">You may unsubscribe at any time.</p>
+          <p class="data">To find out more, please visit our Privacy Policy.</p>
+        </div>
+        <button id="lbtn">CONTINUE</button>
+        <button id="lbtn1" style="display: none">CONTINUE</button>
+       
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../scripts/login.js" type="module"></script>
+
