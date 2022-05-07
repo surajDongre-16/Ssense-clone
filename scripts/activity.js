@@ -33,11 +33,11 @@ everything.addEventListener("click",function(){
 
 // showing data on the main page
 
-// show("gym_wear","freshness","").then((data)=>{
-//     const container= document.getElementById("middle-container")
-//     container.innerHTML=null
-//     append(data,container)
-// })
+show("gym_wear","freshness","").then((data)=>{
+    const container= document.getElementById("middle-container")
+    container.innerHTML=null
+    append(data,container)
+})
 
 
 let x=document.getElementById("fitness").children

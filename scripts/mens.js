@@ -36,11 +36,11 @@ let gender=JSON.parse(localStorage.getItem("gender"))
 gender=gender+"_clothes" 
 // showing data on the main page
 
-// show(gender,"freshness","").then((data)=>{
-//     const container= document.getElementById("middle-container")
-//     container.innerHTML=null
-//     append(data,container)
-// })
+show(gender,"freshness","").then((data)=>{
+    const container= document.getElementById("middle-container")
+    container.innerHTML=null
+    append(data,container)
+})
 
 
 // code for different categories,sorting methods

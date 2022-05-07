@@ -33,11 +33,11 @@ everything.addEventListener("click",function(){
 
 // showing data on the main page
 
-// show("kids","freshness","").then((data)=>{
-//     const container= document.getElementById("middle-container")
-//     container.innerHTML=null
-//     append(data,container)
-// })
+show("kids","freshness","").then((data)=>{
+    const container= document.getElementById("middle-container")
+    container.innerHTML=null
+    append(data,container)
+})
 
 
 // code for different categories,sorting methods
