@@ -1,10 +1,6 @@
-//pricedesc|priceasc|freshness|oldest
-
 
 let show = async (query,price,color)=>{
     // console.log(query)
-
-
     try{
         const options = {
             method: 'GET',
@@ -13,9 +9,7 @@ let show = async (query,price,color)=>{
                 'X-RapidAPI-Key': 'c83cde790bmsh4f0e7202953be1cp1f2680jsn7e1ad9407925'
             }
         };
-//https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=mens%20shirts&base_colour={color}&currency=USD&sizeSchema=US&lang=en-US        
-//https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=freshness&q=${query}&currency=USD&sizeSchema=US&lang=en-US
-let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=${query}&base_colour=${color}&currency=USD&sizeSchema=US&lang=en-US`, options)           
+    let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=${query}&base_colour=${color}&currency=USD&sizeSchema=US&lang=en-US`, options)           
         let data=await res.json()
         // console.log(data)
         // append(data.products)
