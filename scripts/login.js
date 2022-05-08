@@ -1,8 +1,8 @@
-import navbar from "../component/navbar.js"
+import {navbar,shoppingBag} from "../component/navbar.js"
 
 const nav=document.getElementById("navbar")
 nav.innerHTML=navbar()
-
+shoppingBag();
 var store = JSON.parse(localStorage.getItem("ldata")) || [];
 
 var obj = {

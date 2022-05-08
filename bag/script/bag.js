@@ -1,6 +1,7 @@
-import nav from "./bagcomp/nav.js"
+import {nav, shoppingBag} from "../bagcomp/nav.js";
 const navbar = document.getElementById("nav");
 navbar.innerHTML = nav();
+shoppingBag();
 
 let show = async()=>{
     let res = await fetch(`https://fakestoreapi.com/products?limit=5`);

@@ -1,4 +1,4 @@
-let products=JSON.parse(localStorage.getItem("productDetails")) || []
+
 
 let show = async (query,price,color)=>{
     // console.log(query)
@@ -23,10 +23,15 @@ let show = async (query,price,color)=>{
 let append = (data,container) =>{
 
     
-    data.forEach(({brandName,imageUrl,name,color,price:{current:{text,value}}})=>{
+    data.forEach((el)=>{
         // console.log(brandName,imageUrl,name)
+        let {brandName,imageUrl,name,color,price:{current:{text,value}}} = el;
         let div=document.createElement("div")
         div.setAttribute("class","div")
+        div.addEventListener("click",function(){
+           localStorage.setItem("productShow",JSON.stringify(el));
+           window.location.href = "../Product/product.html";
+        })
 
         const brdName=document.createElement("p")
         brdName.innerText=brandName
@@ -41,27 +46,9 @@ let append = (data,container) =>{
         price.innerText=text
 
         div.append(img,brdName,proName,price)
-        div.addEventListener("click",function(){
-            let data={
-                brandName,
-                name,
-                imageUrl,
-                value,
-                text,
-                color
-            }
-            addProduct(data)
-        })
-
         container.append(div)
     })
 }
-function addProduct(data){
-    products.push(data)
-    localStorage.setItem("productDetails",JSON.stringify(products))
-    window.location.href="../Product/product.html"
-}
-
 
 function cSearch(id,sort,color){
     if(id==""){

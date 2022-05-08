@@ -12,8 +12,16 @@ function nav(){
                 <p>ENGLISH</p>
                 <p id="login">LOGIN</p>
                 <p>WISHLIST</p>
-                <p>SHOPPING BAG (0)</p>
+                <p id="ShopBag"></p>
             </div>`
 }
+function shoppingBag(){
+    let b = document.getElementById("ShopBag");
+    b.innerText = `Shopping Bag (${JSON.parse(localStorage.getItem("cart")).length})`;
+    b.style.cursor = "pointer";
+    b.addEventListener("click",()=>{
+        window.location.href = "../bag/bag.html";
+    })
+}
 
-export default nav
+export {nav, shoppingBag};

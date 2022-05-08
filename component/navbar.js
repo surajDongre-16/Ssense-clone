@@ -2,7 +2,7 @@ function navbar(){
     return ` <div id="left-nav">
                 <p id="menswear">MENSWEAR</p>
                 <p id=womenswear>WOMENSWEAR</p>
-                <p id=everything>EVRYTHING ELSE</p>
+                <p id=everything>EVERYTHING ELSE</p>
                 <p id=search-box>SEARCH</p>
             </div>
             <div id="middle-nav">
@@ -12,8 +12,15 @@ function navbar(){
                 <p>ENGLISH</p>
                 <p id="login">LOGIN</p>
                 <p>WISHLIST</p>
-                <p>SHOPPING BAG (0)</p>
+                <p id="ShopBag"></p>
             </div>`
 }
-
-export default navbar
+function shoppingBag(){
+    let b = document.getElementById("ShopBag");
+    b.innerText = `Shopping Bag (${JSON.parse(localStorage.getItem("cart")).length})`;
+    b.style.cursor = "pointer";
+    b.addEventListener("click",()=>{
+        window.location.href = "../bag/bag.html";
+    })
+}
+export  {navbar,shoppingBag};

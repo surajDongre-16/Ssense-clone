@@ -1,10 +1,11 @@
-import navbar from "../component/navbar.js"
+import {navbar,shoppingBag} from "../component/navbar.js"
 import {show,append,cSearch} from "./fetch.js"
 import { activity } from "../component/body.js"
 import {searchDisplay} from "../component/search.js"
 
 const nav=document.getElementById("navbar")
 nav.innerHTML=navbar()
+shoppingBag();
 
 const container=document.getElementById("container")
 container.innerHTML=activity()
