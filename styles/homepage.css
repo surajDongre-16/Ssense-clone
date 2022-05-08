@@ -233,3 +233,155 @@ body{
 #sub_foo_2 >a{
     color: gray;
 }
+
+@media all and (min-width:414px) and (max-width:896px) {
+
+    #mainBody{
+        margin: auto;
+        padding: 30px 0px;
+        margin-top: 5%;
+    }
+    #box1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+    }
+    .Abox1 {
+        width: 100%;
+        cursor: pointer;
+    }
+    #box1 img{
+        height: 70%;
+        width: 100%;
+    
+    }
+    .Box1P{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        text-transform: uppercase;
+        margin-left: 30px;
+        margin-top: 5%;
+        color: #333333;
+    }
+    .Abox1>p{
+        font-size: 20px;
+        font-weight: 100;
+        line-height: 26px;
+        margin-top: -5px;
+        color: #333333;
+    }
+
+    #box2{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        width: 100%;
+        /* border: 1px solid; */
+    }
+    #Sub_B_Box1 h4{
+        display: none;
+    }
+
+    #box3{
+        /* border: 1px solid ; */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #box3 button{
+        height: 40px;
+        width: 100%;
+    }
+    #Sub_C_box1 p:nth-child(1){
+        display: none;
+    }
+
+    #box4{
+        margin-top: 10%;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    #Sub_D_Box1{
+        margin-bottom: 10%;
+    }
+    #Sub_D_Box1 img{
+        height: 100px;
+        width: 200px
+    }
+    #Sub_D_Box1 div:nth-child(2){
+        margin-top: -10%;
+    }
+    #Sub_D_Box1 p:nth-child(3){
+        display: none;
+    }
+
+    #D_Box1_img p{
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+    .D_box1_2{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        cursor: pointer;
+    }
+    #Sub2_D_Box1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .D_box1_2 > div:nth-child(2){
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+
+    #box7{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .E_box7_1{
+        display: none;
+    }
+    #box7 > div:nth-child(4){
+        display: none;
+    }
+    #box7 > div:nth-child(5){
+        display: none;
+    }
+    .E_box7 p{
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+
+    #sub_foo_1 a:nth-child(1){
+        display: none;
+    }
+    #sub_foo_1 a:nth-child(3){
+        display: none;
+    }
+    #sub_foo_1 a:nth-child(4){
+        display: none;
+    }
+    #sub_foo_1 a:nth-child(5){
+        display: none;
+    }
+    #sub_foo_1 a:nth-child(6){
+        display: none;
+    }
+    #sub_foo_1 a:nth-child(7){
+        display: none;
+    }
+
+    
+}
