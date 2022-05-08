@@ -1,3 +1,4 @@
+let products=JSON.parse(localStorage.getItem("productDetails")) || []
 
 let show = async (query,price,color)=>{
     // console.log(query)
@@ -11,7 +12,7 @@ let show = async (query,price,color)=>{
         };
     let res=await fetch(`https://asos2.p.rapidapi.com/products/v2/list?store=US&offset=0&categoryId=4209&limit=48&country=US&sort=${price}&q=${query}&base_colour=${color}&currency=USD&sizeSchema=US&lang=en-US`, options)           
         let data=await res.json()
-        // console.log(data)
+        console.log(data)
         // append(data.products)
         return data.products        
     }catch(err){
@@ -22,7 +23,7 @@ let show = async (query,price,color)=>{
 let append = (data,container) =>{
 
     
-    data.forEach(({brandName,imageUrl,name,price:{current:{text}}})=>{
+    data.forEach(({brandName,imageUrl,name,color,price:{current:{text,value}}})=>{
         // console.log(brandName,imageUrl,name)
         let div=document.createElement("div")
         div.setAttribute("class","div")
@@ -40,9 +41,25 @@ let append = (data,container) =>{
         price.innerText=text
 
         div.append(img,brdName,proName,price)
+        div.addEventListener("click",function(){
+            let data={
+                brandName,
+                name,
+                imageUrl,
+                value,
+                text,
+                color
+            }
+            addProduct(data)
+        })
 
         container.append(div)
     })
+}
+function addProduct(data){
+    products.push(data)
+    localStorage.setItem("productDetails",JSON.stringify(products))
+    window.location.href="../Product/product.html"
 }
 
 
