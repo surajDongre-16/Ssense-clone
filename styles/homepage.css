@@ -1,0 +1,235 @@
+body{
+    color: #333333;
+    padding: 10px 10px;
+}
+#mainBody{
+    margin: auto;
+    padding: 30px 30px;
+    margin-top: 3%;
+}
+#box1 {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    gap: 40px;
+    margin: auto;
+}
+#box1 img{
+    height: 70%;
+    width: 100%;
+
+}
+.Abox1 {
+    width: 50%;
+    cursor: pointer;
+}
+.Abox1 div{
+    display: flex;
+}
+.Box1P{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    margin-left: 30px;
+    margin-top: 0px;
+    color: #333333;
+}
+.Abox1>p{
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 26px;
+    margin-top: -20px;
+    color: #333333;
+
+}
+#box2{
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    /* border: 1px solid; */
+}
+.B_Box1{
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.B_Box1 img{
+    width: 100%;  
+    height: 75%;          
+}
+#Sub_B_Box1{
+    display: flex;
+    gap: 20px;
+    text-align: justify;
+    font-weight: normal;
+}
+#Sub_B_Box1 h3{
+    font-size: 20px;
+}
+#Box1P{
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    text-transform: uppercase;
+}
+#box3{
+    /* border: 1px solid ; */
+    display: flex;
+    gap: 30px;
+}
+#box3 img{
+    width: 100%;
+}
+#box3 > div{
+    cursor: pointer;
+}
+#box3 button{
+    height: 40px;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    color: #333333;
+}
+#Sub_C_box1{
+    display: block;
+    display: flex;
+    gap: 30px;
+}
+#Sub_C_box1 p:nth-child(2){
+    font-size: 25px;
+    margin-top: 10px;
+    color: #333333;
+}
+#box4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+.D_box1{
+    width: 60%;
+}
+#Sub_D_Box1{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+#Sub_D_Box1 img{
+    height: 250px;
+    width: 350px;
+}
+#Sub_D_Box1 p:nth-child(3){
+    font-size: 22px;
+    color: #333333;
+}
+#D_Box1_img img{
+    height: 120px;
+    width: 100px;
+}
+#D_Box1_img{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333333;
+}
+#D_Box1_img p{
+    text-transform: uppercase;
+    font-size: small;
+}
+.D_box1_2{
+    width: 40%;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+#Sub2_D_Box1 img{
+    width: 220px;
+    height: 300px;
+}
+#box6 {
+    text-align: center;
+}
+#box6 h1{
+    text-transform: uppercase;
+    font-size: 70px;
+}
+#box6 p{
+    font-size: 47px;
+}
+#box6 button{
+    height: 40px;
+    padding-left: 20px ;
+    padding-right: 20px ;
+    border-radius: 10px;
+    border: 1px solid grey;
+    background-color: white;
+    color: #333333;
+}
+#box7{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.E_box7{
+    width: 100%;
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.E_box7_1{
+    border-top: 1px solid #555555;
+    border-bottom: 1px solid #555555;
+}
+.E_box7 img{
+    height: 120px;
+    width: 100px;
+}
+.E_box7{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+    /* border-bottom: 1px solid #333333; */
+}
+.E_box7 p{
+    text-transform: uppercase;
+    font-size: small;
+}
+#footer{
+    margin: auto;
+    width: 70%;
+}
+#sub_foo_1{
+    
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+#footer a{
+    color: #333333;
+    text-decoration: none;
+}
+#sub_foo_2 {
+    font-size: 12px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#sub_foo_2 >a{
+    color: gray;
+}
