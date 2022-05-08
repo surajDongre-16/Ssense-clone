@@ -1,5 +1,8 @@
 import {navbar,shoppingBag} from "../component/navbar.js"
 
+import footer from "../component/footer.js";
+document.getElementById("footer").innerHTML = footer();
+
 const nav=document.getElementById("navbar")
 
 nav.innerHTML=navbar()

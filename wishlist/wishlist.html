@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <script src="https://kit.fontawesome.com/69d813b4dd.js" crossorigin="anonymous"></script>
+    <style >
+         body>div:nth-child(4){
+             width: 70%;
+             margin: auto;
+             margin-top: 40px;
+         }
+         body>div:nth-child(4)>div{
+             font-size: 12px;
+             width: 80%;
+             word-spacing: 1px;
+         }
+         body>div:nth-child(4)>div>p{
+             margin-top: -5px;
+         }
+         #wishAddBag{
+            position: fixed;
+            top: 40;
+            background-color: black;
+            color: white;
+            text-align: center;
+            white-space:nowrap;
+            padding: 10px 695px 10px 695px;
+            display: none;
+         }
+         #wishlist{
+             margin-bottom: 5%;
+             display: grid;
+             grid-template-columns: repeat(4,1fr);
+             grid-template-rows: auto;
+             gap: 40px;
+         }
+         #removeWish{
+            position: fixed;
+            top: 40;
+            background-color: black;
+            color: white;
+            text-align: center;
+            white-space:nowrap;
+            padding: 10px 695px 10px 695px;
+            display: none;
+         }
+    </style>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="WishAddBag">This item has been added to your bag.</div>
+    <div id="removeWish">Removed from Wishlist.</div>
+    <div>
+        <div>
+            <p><b>WISHLIST</b></p>
+            <p>Use this page to manage the items you have added to your wishlist. Items saved can be removed or added to your Shopping Bag for purchase.</p>
+        </div>
+        <div id="wishlist"></div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
+
+<script src="../scripts/wishlist.js" type="module"></script>

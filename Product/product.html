@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/order.css">
+    <link rel="stylesheet" href="/styles/homepage.css">
 </head>
 <body>
     <div id="navbar"></div>
+    <div id="sizeErr"><i class="fa-solid fa-triangle-exclamation"></i> Please select a size</div>
+    <div id="wishSuccess"><i class="fa-solid fa-circle-check"></i>Added to Wishlist</div>
+    <div id="wishRemSuccess"><i class="fa-solid fa-circle-check"></i>Removed from Wishlist</div>
     <div id="product">
         <div >
             <!-- Demo Data-->
@@ -31,12 +36,7 @@
             <br>
             <p>221057M213132</p>
         </div>
-        <div id="image_container">
-            <div><img src="https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/221057M213132_1/comme-des-garcons-homme-black-nylon-shirt.jpg"  alt="" width="400px"></div>
-            <div><img src="https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/221057M213132_2/comme-des-garcons-homme-black-nylon-shirt.jpg"  alt="" width="400px"></div>
-            <div><img src="https://img.ssensemedia.com/images/b_white,g_center,f_auto,q_auto:best/221057M213132_3/comme-des-garcons-homme-black-nylon-shirt.jpg"  alt="" width="400px"></div>
-
-        </div>
+        <div id="image_container"></div>
         <div id="buy" >
             <p id="price"></p>
             <select name="" id="selectSize" >
@@ -54,7 +54,8 @@
     </div>
     <div id="recommend">
     </div>
+    <div id="footer"></div>
 </body>
 </html>
-
+<script src="https://kit.fontawesome.com/69d813b4dd.js" crossorigin="anonymous"></script>
 <script src="/scripts/product.js" type="module"></script>
