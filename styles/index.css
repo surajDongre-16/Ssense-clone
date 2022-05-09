@@ -20,7 +20,59 @@
 #navbar > div p{
     cursor: pointer;
 }
-
+#assist{
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+#liveassist{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    font-size: 12px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+#liveIntro{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    width: 315px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+}
+#liveIntro>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: 1px solid black;
+}
+#liveIntro>div:nth-child(2){
+    padding-left: 2%;
+}
+#liveIntro>div:nth-child(2)>label, #liveIntro>div:nth-child(2)>input{
+    display: block;
+    padding-right: 140px;
+}
+#textarea{
+    height: 200px;
+}
+#sendButton{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 145px 10px 135px;
+    font-size: 12px;
+}
 #product{
     display: flex;
 

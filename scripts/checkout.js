@@ -106,8 +106,20 @@ function cartData(cdata){
     })
 }
 cartData(summarydata);
-
-
+function ival(id){
+   let a = document.getElementById(id).value;
+   return a;
+}
 document.getElementById("button").addEventListener("click", function(){
-    window.location.href = "../html files/aftercheckout.html";
+    if(ival("f_Name") == "" || ival("l_Name") == "" || ival("address") == "" || ival("company") == "" || ival("city") == "" || ival("zip") == "" || ival("mobile") == ""){
+        setTimeout(()=>{
+            document.getElementById("formErr").style.display = "block";
+        },0)
+        setTimeout(()=>{
+            document.getElementById("formErr").style.display = "none";
+        },3000)
+    }
+    else{
+        window.location.href = "../html files/aftercheckout.html";
+    }
 })

@@ -2,6 +2,9 @@ import {navbar,shoppingBag} from "../component/navbar.js"
 import {womens_shoes} from "../component/body.js"
 import {show,append,cSearch} from "./fetch.js"
 import {searchDisplay} from "../component/search.js"
+import {liveassist,assistListener} from "../component/liveassist.js";
+document.getElementById("assist").innerHTML = liveassist();
+assistListener();
 
 document.querySelector(".search").innerHTML=searchDisplay()
 const nav=document.getElementById("navbar")

@@ -12,6 +12,13 @@
     <div id="navbar"></div>
     <div class="search"></div>
     <div id="container"></div>
+    <div id="assist"></div>
 </body>
 </html>
 <script src="../scripts/mens.js" type="module"></script>
+<script type="module">
+    import {liveassist,assistListener} from "../component/liveassist.js";
+    document.getElementById("assist").innerHTML = liveassist();
+    assistListener();
+
+</script>

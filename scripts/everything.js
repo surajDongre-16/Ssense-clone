@@ -7,6 +7,9 @@ const nav=document.getElementById("navbar")
 nav.innerHTML=navbar()
 shoppingBag();
 
+import {liveassist,assistListener} from "../component/liveassist.js";
+document.getElementById("assist").innerHTML = liveassist();
+assistListener();
 
 const container=document.getElementById("container")
 container.innerHTML=everybody()
