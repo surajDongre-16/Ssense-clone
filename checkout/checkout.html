@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/order.css">
+    <link rel="stylesheet" href="/styles/homepage.css">
 </head>
 <body>
     <div id="navbarOnlyLogo"><div id="logo1"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1471963917/web/ssense_logo_v2.svg" alt="">
@@ -40,9 +41,9 @@
                 <p>SHIPPING METHOD</p>
                 <input type="radio" name="shipping_method" id="shippingradio"><label for="shipping_method">$0.00 USD | 5 - 7 days | Express</label>
                 <p>PAYMENT METHOD</p>
-                <div><input type="radio" name="paymethod" id="card"> <label for="card">Pay with credit or debit card</label></div>
-                <div><input type="radio" name="paymethod" id="paypalradio">  <label for="paypalradio">Pay with PayPal</label> </div>
-                <div><input type="radio" name="paymethod" id="alipay"> <label for="alipay">Pay with Alipay</label></div>
+                <div><input type="radio" name="paymethod" id="card"> <label for="card">Pay with credit or debit card <img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/visa_borderless_v2.svg" alt="" id="imgcard1"><img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/mastercard_borderless_v2.svg" alt="" id="imgcard2"></label></div>
+                <div><input type="radio" name="paymethod" id="paypalradio">  <label for="paypalradio">Pay with PayPal <img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/paypal_borderless_v2.svg" alt="" id="imgpaypal"></label> </div>
+                <div><input type="radio" name="paymethod" id="alipay"> <label for="alipay">Pay with Alipay <img src="https://res.cloudinary.com/ssenseweb/image/upload/v1535478719/web/checkout/alipay_borderless_v2.svg" alt="" id="imgapay"></label></div>
             </div>
             <div id="card_details">
                 <p>Card Details</p>
@@ -97,14 +98,14 @@
                 <p class="summary_content">COUNTRY/REGION:</p>
             </div>
             <div>
-                <p>
-                    Important Notice
-Our prices do not include Duty and VAT. Please consult your country/region’s customs legislation for more information about potential additional charges.
+                <p id="notice">
+                    Important Notice: Our prices do not include Duty and VAT.  Please consult <br> your country/region's customs legislation for  more information  <br> about potential additional charges.
                 </p>
             </div>
             <div class="summary_content" id="button"><div id="button_card_pay">PLACE ORDER</div></div>
         </div>
     </div>
+    <div id="footer"></div>
 </body>
 </html>
 <script src="https://www.paypal.com/sdk/js?client-id=AfDzwH4OwyT0s0XzYRSItNFiPdvdQoqkScDhl-aVioQcj4OirTmJTYt40xEn3unNme5E6NGPi3BEG1ND" ></script>

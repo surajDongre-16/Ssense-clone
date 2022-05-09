@@ -14,7 +14,18 @@ p{
 color: rgb(65, 61, 61);
 font-size: small;
 }
+#wishSuccess{
+    position: fixed;
+    top: 40;
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    white-space:nowrap;
+    padding: 10px 695px 10px 695px;
+    display: none;
 
+}
 
 #container{
 display:grid;
@@ -76,10 +87,6 @@ margin-top: 200px;
 #d2, #d3{
     display: flex;
     justify-content: space-between;
-}
-#d3{
-    border-bottom: 1px solid rgb(175, 154, 154);
-
 }
 .mtv,.rmv{
     text-decoration: underline;

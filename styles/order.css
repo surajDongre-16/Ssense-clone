@@ -40,6 +40,9 @@ input[type="radio"],input[type="checkbox"]{
 #card_details{
     display: none;
 }
+#imgcard1,#imgcard2,#imgpaypal,#imgapay{
+    filter:grayscale(100%);
+}
 #billing{
     display: none;
     margin-top: 2%;
@@ -50,9 +53,10 @@ input[type="radio"],input[type="checkbox"]{
     
 }
 .summary_content{
-    padding-right: 280px;
+    padding-right: 100px;
     
 }
+
 #button{
     background-color: black;
     color: white;
@@ -61,7 +65,7 @@ input[type="radio"],input[type="checkbox"]{
     text-align: center;
     cursor: pointer;
 }
-#iimg{
+#img{
     height: 100px;
 }
 #d2{
@@ -71,4 +75,5 @@ input[type="radio"],input[type="checkbox"]{
 #os{
     border-bottom: 2px solid black;
 }
+
 

@@ -1,5 +1,6 @@
 
-
+import footer from "../component/footer.js";
+document.getElementById("footer").innerHTML = footer();
 
 import {countries,states} from '../component/form_Components.js';
 document.getElementById("country").innerHTML = countries();
@@ -25,6 +26,10 @@ document.getElementById("card").addEventListener("change",function(){
         if(card){
             document.getElementById("button").innerHTML = "PLACE ORDER";
             cardDetails.style.display = "block";
+            document.getElementById("imgcard1").style.filter = "none";
+            document.getElementById("imgcard2").style.filter = "none";
+            document.getElementById("imgpaypal").style.filter = "grayscale(100%)";
+            document.getElementById("imgapay").style.filter = "grayscale(100%)";
 
         } 
 })
@@ -40,6 +45,10 @@ document.getElementById("paypalradio").addEventListener("change",function(){
                  tagline: 'false'
             }
             }).render("#button");
+            document.getElementById("imgcard1").style.filter = "grayscale(100%)";
+            document.getElementById("imgcard2").style.filter = "grayscale(100%)";
+            document.getElementById("imgpaypal").style.filter = "none";
+            document.getElementById("imgapay").style.filter = "grayscale(100%)";
         }
 })
 document.getElementById("sameAddress").checked = true;
@@ -54,24 +63,49 @@ document.getElementById("sameAddress").addEventListener("change",function(){
 })
 
 
-let summarydata = JSON.parse(localStorage.getItem("cart") || []);
+let summarydata = JSON.parse(localStorage.getItem("cart"));
 console.log(summarydata);
 
-summarydata.forEach((el)=>{
-    const div = document.createElement("div");
-    const div2 = document.createElement("div");
-    div2.setAttribute("id","d2");
-    const img = document.createElement("img");
-    img.src = el.image;
-    img.setAttribute("id","iimg");
-    const p = document.createElement("p");
-    p.innerText = el.price;
-    const title = document.createElement("p");
-    title.innerText = el.title;
-    div.append(img);
-    div2.append(title,p);
-    document.querySelector("#appended").append(div2, div);
-});
+function cartData(cdata){
+    document.getElementById("appended").innerHTML = null;
+    summarydata.forEach((el,i)=>{
+        const box = document.createElement("div");
+        box.style.display = "flex";
+        box.style.borderBottom = "1px solid black";
+        box.style.position = "relative";
+        const div = document.createElement("div");
+        div.setAttribute("id", "dd");
+        div.style.display = "inline-block";
+        const div2 = document.createElement("div");
+        div2.setAttribute("id","d2");
+        div2.style.display = "inline-block";
+        div2.style.marginLeft = "20px";
+        const div3 = document.createElement("div");
+        div3.setAttribute("id", "d3");
+        div3.style.display = "inline-block";
+        div3.style.height = "100px";
+        div3.style.position = "absolute";
+        div3.style.top = "0";
+        div3.style.right = "0";
+        const img = document.createElement("img");
+        img.src = "https://" + el.imageUrl;
+        img.setAttribute("height","80px")
+        const title = document.createElement("p");
+        title.innerText = el.name;
+        const size = document.createElement("p");
+        size.innerText ="Size : " + el.size;
+        const price = document.createElement("p");
+        price.innerText = "$" + el.price.current.value;
+        price.style.position = "absolute";
+        price.style.right = "0";
+        div.append(img);
+        div2.append(title,size);
+        div3.append(price);
+        box.append(div,div2,div3);
+        document.getElementById("appended").append(box);
+    })
+}
+cartData(summarydata);
 
 
 document.getElementById("button").addEventListener("click", function(){

@@ -39,40 +39,66 @@ let add = (el)=>{
 show();
 shoppingBag();
 
+let wishList = JSON.parse(localStorage.getItem("wishlist"));
 
 let cdata = JSON.parse(localStorage.getItem("cart") || []);
-cdata.forEach((el,i)=>{
-    const div = document.createElement("div");
-    div.setAttribute("id", "dd");
-    const div2 = document.createElement("div");
-    div2.setAttribute("id","d2");
-    const div3 = document.createElement("div");
-    div3.setAttribute("id", "d3");
-    const img = document.createElement("img");
-    img.src = el.image;
-    const title = document.createElement("p");
-    title.innerText = el.title;
-    const cat = document.createElement("p");
-    cat.innerText = el.category;
-    const price = document.createElement("p");
-    price.innerText = "$" + el.price;
-    const mtv = document.createElement("p");
-    mtv.setAttribute("class","mtv");
-    mtv.innerText = "Move to Wishlist";
-    const remove = document.createElement("p");
-    remove.innerText = "Remove";
-    remove.setAttribute("class", "rmv");
-    remove.addEventListener("click", function(){
-        removeitem(el,i);
+console.log(cdata);
 
-    });
-    div.append(img);
-    div2.append(title,price);
-    div3.append(mtv, remove);
-    document.getElementById("main").append(div2);
-    document.getElementById("main").append(div);
-    document.getElementById("main").append(div3);
-});
+function cartData(cdata){
+    document.getElementById("cdata").innerHTML = null;
+    cdata.forEach((el,i)=>{
+        const box = document.createElement("div");
+        box.style.display = "flex";
+        box.style.borderBottom = "1px solid black";
+        box.style.position = "relative";
+        const div = document.createElement("div");
+        div.setAttribute("id", "dd");
+        div.style.display = "inline-block";
+        const div2 = document.createElement("div");
+        div2.setAttribute("id","d2");
+        div2.style.display = "inline-block";
+        div2.style.marginLeft = "20px";
+        const div3 = document.createElement("div");
+        div3.setAttribute("id", "d3");
+        div3.style.display = "inline-block";
+        div3.style.height = "100px";
+        div3.style.position = "absolute";
+        div3.style.top = "0";
+        div3.style.right = "0";
+        const img = document.createElement("img");
+        img.src = "https://" + el.imageUrl;
+        const title = document.createElement("p");
+        title.innerText = el.name;
+        const size = document.createElement("p");
+        size.innerText ="Size : " + el.size;
+        const price = document.createElement("p");
+        price.innerText = "$" + el.price.current.value;
+        price.style.position = "absolute";
+        price.style.right = "0";
+        const mtv = document.createElement("p");
+        mtv.setAttribute("class","mtv");
+        mtv.innerText = "Move to Wishlist";
+        mtv.addEventListener("click",function(){
+            moveToWish(el,i);
+        })
+        const remove = document.createElement("p");
+        remove.innerText = "Remove";
+        remove.setAttribute("class", "rmv");
+        remove.style.position = "absolute";
+        remove.style.bottom = "0";
+        remove.style.right = "0";
+        remove.addEventListener("click", function(){
+            removeitem(el,i);
+    
+        });
+        div.append(img);
+        div2.append(title,size,mtv);
+        div3.append(price, remove);
+        box.append(div,div2,div3);
+        document.getElementById("cdata").append(box);
+    })
+}
+cartData(cdata);
 
 function removeitem(i){
     cdata.splice(i,1);
@@ -80,3 +106,21 @@ function removeitem(i){
     window.location.reload();
 }
 
+function moveToWish(el,i){
+    cdata.splice(i,1);
+    wishList.push(el);
+    localStorage.setItem("wishlist",JSON.stringify(wishList));
+    localStorage.setItem("cart",JSON.stringify(cdata));
+    setTimeout(()=>{
+        document.getElementById("wishSuccess").style.display = "block";
+    },0)
+    setTimeout(()=>{
+        document.getElementById("wishSuccess").style.display = "none";
+    },3000)
+    cartData(cdata);
+
+}
+
+document.getElementById("check").addEventListener("click",function(){
+    window.location.href = "../checkout/checkout.html";
+})
