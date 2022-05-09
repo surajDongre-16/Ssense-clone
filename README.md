@@ -92,9 +92,10 @@ Additional Features: Kept the fonts, colors and favicon and titles consistent th
 - Our skills in JavaScript specially in Fetch API, import/export, DOM manipulation etc. became better.
 
 - We all learned how to plan a project and execute that.
-## Feedback
+
+## Feedback 
 
 If you have any feedback, please reach out to us at surajdongre8@gmail.com, ksirtaj29@gmail.com, mdsahilamaan2017@gmail.com,
-sharangahirekar1@gmail.com
-
+sharangahirekar1@gmail.com,
+pokhariyahimansu@gmail.com 
 
