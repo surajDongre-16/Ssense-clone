@@ -6,7 +6,7 @@ SSENSE is a multi-brand retailer based in Montreal, Canada specialising in the s
 
 ## About this project:
 This is a team project, built by us in the Construct Week - Unit 3 at Masai School.
-Deployed link of Netlify :https://lucky-fenglisu-6040cb.netlify.app/
+Deployed link of Netlify :https://ssense-6040cb.netlify.app/
 ## Team Members ❤️
 
 - [Suraj Dongre](https://www.github.com/surajDongre-16)
