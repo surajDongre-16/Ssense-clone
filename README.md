@@ -33,6 +33,13 @@ Order Successful: Order successful message will be displayed over the screen and
 Additional Features: Kept the fonts, colors and favicon and titles consistent throughtout the whole site to give a feel like the original site and also wishlist feature is added to give more real experience.
 
 
+## Screenshots
+- Homepage
+[![Screenshot-244.png](https://i.postimg.cc/tgJmSMBY/Screenshot-244.png)](https://postimg.cc/MckDXd2S)
+- Mens page
+[![Screenshot-245.png](https://i.postimg.cc/V6j9D9PJ/Screenshot-245.png)](https://postimg.cc/zbGRfgBN)
+- Womens page
+[![Screenshot-246.png](https://i.postimg.cc/LXMLYqg2/Screenshot-246.png)](https://postimg.cc/Y4bhTCxs)
 ## Tech Stack:
 
 **HTML** 
