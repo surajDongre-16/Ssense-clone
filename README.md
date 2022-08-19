@@ -40,6 +40,10 @@ Additional Features: Kept the fonts, colors and favicon and titles consistent th
 [![Screenshot-245.png](https://i.postimg.cc/V6j9D9PJ/Screenshot-245.png)](https://postimg.cc/zbGRfgBN)
 - Womens page
 [![Screenshot-246.png](https://i.postimg.cc/LXMLYqg2/Screenshot-246.png)](https://postimg.cc/Y4bhTCxs)
+- Product page
+![Product page](https://mymasaibucket.s3.us-east-2.amazonaws.com/Screenshot+2022-08-19+205449.png)
+- Paypal Integration
+![Paypal Integration](https://mymasaibucket.s3.us-east-2.amazonaws.com/Screenshot+2022-08-19+205853.png)
 
 ## Tech Stack:
 
@@ -84,9 +88,11 @@ Additional Features: Kept the fonts, colors and favicon and titles consistent th
 
 - Shopping bag page is designed & functioned by Md Sahil Amaan.
 
-- Checkout page is desinged and functioned by Sharang.
+- Checkout page is designed and functioned by Sharang.
 
-- Wishlist function is desinged by Sharang.
+- Paypal payment method integrated by Sharang.
+
+- Wishlist function is designed by Sharang.
 
 - Code optimization done by Suraj. 
 
